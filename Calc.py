@@ -1,33 +1,35 @@
-def multiply(num1, num2):
-    return num1 * num2
+def add(a, b):
+    return a + b
 
-def subtract(num1, num2):
-    result = num1 - num2
-    return result
+def subtract(a, b):
+    return a - b
 
-def divide(num1, num2):
-    if num2 == 0:
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
         return "Error: Cannot divide by zero!"
-    return num1 / num2
+    return a / b
 
 # Main program
 print("Calculator Operations:")
-print("1. Multiply")
+print("1. Add")
 print("2. Subtract")
-print("3. Divide")
+print("3. Multiply")
+print("4. Divide")
 
-choice = input("Choose operation (1-3): ")
+choice = input("Choose operation (1-4): ")
 num1 = float(input("Enter first number: "))
 num2 = float(input("Enter second number: "))
 
 if choice == '1':
-    result = multiply(num1, num2)
-    print(f"{num1} × {num2} = {result}")
+    print(f"{num1} + {num2} = {add(num1, num2)}")
 elif choice == '2':
-    result = subtract(num1, num2)
-    print(f"{num1} - {num2} = {result}")
+    print(f"{num1} - {num2} = {subtract(num1, num2)}")
 elif choice == '3':
-    result = divide(num1, num2)
-    print(f"{num1} ÷ {num2} = {result}")
+    print(f"{num1} × {num2} = {multiply(num1, num2)}")
+elif choice == '4':
+    print(f"{num1} ÷ {num2} = {divide(num1, num2)}")
 else:
     print("Invalid choice")
